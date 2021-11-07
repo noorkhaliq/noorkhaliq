@@ -21,7 +21,7 @@ class ProjectController extends Controller
     {
         $project = Projects::query();
 
-        return ['status' => true , 'data' => ProjectResource::collection($project->paginate(6)) ,];
+        return ['status' => true , 'data' => ProjectResource::collection($project->paginate(15)) ,];
     }
 
     public function category()
@@ -34,5 +34,11 @@ class ProjectController extends Controller
 //        if (request()->cat)
 //            $project->where('category_id', request()->cat);
 //        return ['status' => true , 'data' => $project ->paginate(15) ,$category];
+    }
+
+    public function categoryList()
+    {
+        $category = Categories::all();
+        return ['status' => true , 'data' => $category];
     }
 }

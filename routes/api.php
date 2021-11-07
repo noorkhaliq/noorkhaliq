@@ -24,8 +24,10 @@ Route::get('blog_detail/{id}', [\App\Http\Controllers\Api\BlogsController::class
 Route::get('services', [\App\Http\Controllers\Api\BlogsController::class , 'services']);
 
 
-Route::get('index-projects', [\App\Http\ Controllers\Api\ProjectController::class , 'indexProjects']);
 Route::get('category', [\App\Http\Controllers\Api\ProjectController::class , 'category']);
+Route::get('category-list', [\App\Http\Controllers\Api\ProjectController::class , 'categoryList']);
+Route::get('project-list', [\App\Http\Controllers\Api\ProjectController::class , 'projectList']);
+Route::get('index-projects', [\App\Http\Controllers\Api\ProjectController::class , 'indexProjects']);
 
 
 Route::get('settings', [\App\Http\Controllers\Api\SettingController::class , 'index']);
